@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flexbox</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <style>
+            @font-face {
+            font-family: 'Graphik LCG';
+            src: url('./fonts/GraphikLCG-Medium.woff2') format('woff2'),
+                url('./fonts/GraphikLCG-Medium.woff') format('woff');
+            font-display: swap;
+            font-weight: 500;
+            font-style: normal;
+            }
+
+            @font-face {
+            font-family: 'Gilroy';
+            src: url('./fonts/Gilroy-Regular.woff2') format('woff2'),
+                url('./fonts/Gilroy-Regular.woff') format('woff');
+            font-display: swap;
+            font-weight: normal;
+            font-style: normal;
+            }
+
+            @font-face {
+            font-family: 'Gilroy';
+            src: url('./fonts/Gilroy-ExtraBold.woff2') format('woff2'),
+                url('./fonts/Gilroy-ExtraBold.woff') format('woff');
+            font-display: swap;
+            font-weight: 800;
+            font-style: normal;
+            }
+
+            @font-face {
+            font-family: 'Gilroy';
+            src: url('./fonts/Gilroy-Medium.woff2') format('woff2'),
+                url('./fonts/Gilroy-Medium.woff') format('woff');
+            font-display: swap;
+            font-weight: 500;
+            font-style: normal;}
+            @font-face {
+            font-family: 'Alana';
+            src: url('./fonts/Alana_Pro_RUS.woff2') format('woff2'),
+                url('./fonts/Alana_Pro_RUS.woff') format('woff'),
+                url('./fonts/Alana_Pro_RUS.otf') format('otf');
+            font-display: swap;
+            font-weight: 500;
+            font-style: normal;
+            }  
+            @font-face {
+                font-family: 'DRAZKI-Regular';
+                src: url('./fonts/DRAZKI-Regular.ttf') format("truetype");
+                font-display: swap;
+                font-weight: 500;
+                font-style: normal;
+            }  
+            .table{
+                padding: 18px;
+                border-collapse: collapse;
+                margin-left: 20px auto;
+                text-align: center;
+                width: 60%;    
+            }
+                /* max-width: 2000px; */
+            /* .table td, .table th{
+                border: none;
+            }
+
+            }
+            #id1{
+                border: 1px solid rgb(107, 100, 100);
+                padding: 22px;
+
+                /* border-collapse: collapse; */
+                
+            .cont{
+                position: relative;
+                bottom: -2px;
+                font-size: small;
+                /* padding: 18px; */
+            }
+            .cont2{
+                /* font-weight:bold; */
+                text-align: left;
+                position: relative;
+                right: 10px;
+                bottom: 10px;
+                width: 140px;
+                font-size:28px;
+                line-height: 18px;
+                background-color:rgba(187, 176, 167, 0.0);
+                /* padding: 18px; */
+            }
+            .cont3{
+                font-weight:bold;
+                font-style:unset;
+                text-align: left;
+                position: relative;
+                right: 200px;
+                bottom: 10px;
+                width: 280px;
+                font-size: 18px;
+                color: rgb(252, 249, 89);
+                /* background-color: rgb(187, 176, 167, 0.0); */
+                line-height: 18px;
+                /* padding: 18px; */
+            }
+            .cont4{
+                position: relative;
+                bottom: 5px;
+                /* width: 150px; */
+                /* font-size:medium; */
+                /* background-color: rgb(187, 176, 167, 0.3) */
+                /* padding: 18px; */
+            }
+            .povorot{
+            font-size:36px;
+            transform:rotate(-45deg);
+            font-family: 'Alana';
+            font-weight:lighter ;
+            position: relative;
+            left: 190px;
+            bottom: 300px;
+            line-height: 0.1px;
+            }	
+            .povorot2{
+            font-size:36px;
+            transform:rotate(-48deg);
+            font-family: 'Alana';
+            font-weight:lighter ;
+            position: relative;
+            left: 280px;
+            bottom: 340px;
+            line-height: 0.1px;
+            }	
+            td, th{
+                /* border: 1px solid rgb(236, 17, 46); */
+                padding: 10px;
+            }
+            .banks{
+                /* border: 1px solid rgb(233, 11, 41); */
+                border-collapse: collapse;
+                position: relative;
+                top: 10px;
+                right: 12px;
+                width: 1101px;
+                /* height: 800px; */
+                /* border: 3px solid rgba(138, 135, 138, 0.7);  */
+                display: flex;   
+            }
+            .banks td, .banks th{
+               
+                border: 3px solid rgba(73, 46, 16, 0.7);
+            }
+            .table td, .table th{
+                border: none;     
+            }
+            .docs{
+                font-size: 13pt;
+                font-family: Georgia, serif;
+                font-style: italic;
+                color: #a286bd;
+                width: 1101px;
+                position: relative;
+                right: 12px;
+                border-collapse: collapse;
+                background-color:#fffafa;
+                top: 10px;
+                border: 1px solid #a286bd;
+                /* height: 600px; */
+            }
+            .main{
+                width: 1100px;
+                height: 2465px;
+                /* border: 5px solid rgba(138, 135, 138, 0.7); */
+                border: 1px solid #a286bd;
+                background: url("img/baby2.png")10% -5% repeat-y;
+            } 
+            .move{
+                 width: 1100px;
+                height: 1200px;
+                position: relative;
+                top: 290px;
+            }
+            .main div{
+                display: block;
+                padding: 12px;
+            } 
+
+
+    </style>
+<div class="main">
+    <div class="move">
+        <h3 class="povorot"> Расчет стоимости банковской гарантии,<p> по случаю Блистательной Победы !!!</p></h3>
+        <h4 class="povorot2"> ООО "Фирма"</h4>
+        <table class="table">
+            <tbody>
+            <tr>
+                <td colspan="2" class="cont2" style=" font-family: 'Alana';">Закупка</td>
+                <td class="cont3">№ 0384746469576669431</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="cont2" style="font-family: 'Alana';">Сумма БГ</td>
+                <td class="cont3"
+                    style="font-family:'DRAZKI-Regular';font-size: 16px; letter-spacing: 8px; font: weight 0 px;">
+                    5486984.05 руб
+                </td>
+                <!-- <td class="cont3" style="text-align: right;">поле ввода суммы </td> -->
+            </tr>
+            <!-- <tr>
+                <td colspan="2"></td>
+                <td></td>
+                <td>отправить </td>
+            </tr> -->
+            <tr>
+                <td colspan="2" class="cont2" style=" font-family: 'Alana';">Срок БГ</td>
+                <td class="cont3"
+                    style="font-family:'DRAZKI-Regular';font-size: 16px; letter-spacing: 3px; font: weight 0 px;">по
+                    31.12.2021 г.
+                </td>
+                <!-- <td class="cont3">поле ввода срока </td> -->
+            </tr>
+            </tbody>
+        </table>
+        <table class="banks">
+            <tr style="font-size: 24px; color: rgb(73, 26, 14); font-weight:0; background-color:rgba(189, 175, 154, 0.7); font-family: 'DRAZKI-Regular'; letter-spacing: 2px;">
+                <th colspan="2">Банкъ</th>
+                <br>
+                <th>годовая ставка</th>
+                <br>
+                <th>Комиссия банка</th>
+                <br>
+                <th>Итоговая комиссия</th>
+            </tr>
+            <tr style="background-color: rgba(6, 236, 18, 0.9); font-size: 24px;">
+                <td>(лого)</td>
+                <td>(банк&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;)
+                </td>
+                <td>(годовая)</td>
+                <td>(комиссия)</td>
+                <td>(итоговая)</td>
+            </tr>
+            <tr style="background-color: rgba(0, 255, 115, 0.8);">
+                <td>(лого)</td>
+                <td>(банк)</td>
+                <td>(годовая)</td>
+                <td>(комиссия)</td>
+                <td>(итоговая)</td>
+            </tr>
+            <tr style="background-color:rgb(0, 255, 150, 0.7);">
+                <td>(лого)</td>
+                <td>( банк)</td>
+                <td>(годовая)</td>
+                <td>(комиссия)</td>
+                <td>(итоговая)</td>
+            </tr>
+            <tr style="background-color:rgba(0, 255, 220, 0.9);">
+                <td>(лого)</td>
+                <td>( банк)</td>
+                <td>(годовая)</td>
+                <td>(комиссия)</td>
+                <td>(итоговая)</td>
+            </tr>
+            <tr style="background-color:hsla(179, 100%, 50%, 0.8);">
+                <td>(лого)</td>
+                <td>( банк)</td>
+                <td>(годовая)</td>
+                <td>(комиссия)</td>
+                <td>(итоговая)</td>
+            </tr>
+            <tr style="background-color:hsla(68, 100%, 50%, 0.502);">
+                <td>(лого)</td>
+                <td>( банк)</td>
+                <td>(годовая)</td>
+                <td>(комиссия)</td>
+                <td>(итоговая)</td>
+            </tr>
+            <tr style="background-color:hsla(68, 100%, 50%, 0.502);">
+                <td>(лого)</td>
+                <td>( банк)</td>
+                <td>(годовая)</td>
+                <td>(комиссия)</td>
+                <td>(итоговая)</td>
+            </tr>
+            <tr style="background-color:hsla(60, 100%, 50%, 0.6);">
+                <td>(лого)</td>
+                <td>( банк)</td>
+                <td>(годовая)</td>
+                <td>(комиссия)</td>
+                <td>(итоговая)</td>
+            </tr>
+            <tr style="background-color:#ffee00b3;">
+                <td>(лого)</td>
+                <td>( банк)</td>
+                <td>(годовая)</td>
+                <td>(комиссия)</td>
+                <td>(итоговая)</td>
+            </tr>
+            <tr style="background-color:#ffaf0080;">
+                <td>(лого)</td>
+                <td>( банк)</td>
+                <td>(годовая)</td>
+                <td>(комиссия)</td>
+                <td>(итоговая)</td>
+            </tr>
+            <tr style="background-color:#ff780080;">
+                <td>(лого)</td>
+                <td>( банк)</td>
+                <td>(годовая)</td>
+                <td>(комиссия)</td>
+                <td>(итоговая)</td>
+            </tr>
+            <tr style="background-color:#ff460080;">
+                <td>(лого)</td>
+                <td>( банк)</td>
+                <td>(годовая)</td>
+                <td>(комиссия)</td>
+                <td>(итоговая)</td>
+            </tr>
+            <tr style="background-color:#ff2600b3;">
+                <td>(лого)</td>
+                <td>( банк)</td>
+                <td>(годовая)</td>
+                <td>(комиссия)</td>
+                <td>(итоговая)</td>
+            </tr>
+            <tr style="background-color:#ff0900cc;">
+                <td>(лого)</td>
+                <td>( банк)</td>
+                <td>(годовая)</td>
+                <td>(комиссия)</td>
+                <td>(итоговая)</td>
+            </tr>
+            <tr style="background-color:rgba(255, 0, 0, 0.9);">
+                <td>(лого)</td>
+                <td>( банк)</td>
+                <td>(годовая)</td>
+                <td>(комиссия)</td>
+                <td>(итоговая)</td>
+            </tr>
+        </table>
+        <table class="docs" style="text-align: center;">
+            <tr>
+                <td>
+                    <br><br>
+                    <span><b>vlaskin@offenbach.ru</b></span><br><br>
+                    <span>Власкин Максим</span><br>
+                    <span>ООО "Оффенбах и Дебюсси"</span><br>
+                    <span>ИНН: 7733285783</span><br>
+                    <span>Тел: 8-495-118-35-86</span><br>
+                    <span>Моб: 8-999-800-89-21</span><br>
+                    <span>WhatsApp: 8-999-800-89-21</span><br>
+                </td>
+            </tr>
+        </table>
+        <table class="docs" style="height: 882px;">
+            <tr>
+                <td>
+                    <span style="font-size: 22px;"><b>Перечень документов:&nbsp;</b></span><br>
+                    <span> </span><br><br>
+                    <span>Цветные скан-копии&nbsp;документов заверенных подписью руководителя и печатью организации&nbsp;</span><br>
+                    <span> </span><br>
+                    <span><b>Юридические лица:&nbsp;</b></span><br>
+                    <span></span><br>
+                    <span>Юридические документы&nbsp;(цветные скан-копии):&nbsp;</span><br>
+                    <span></span><br>
+                    <span>- Устав&nbsp;</span><br>
+                    <span>- Решение/Протокол о создании общества (протокол);&nbsp;</span><br>
+                    <span>- Решение/Протокол (выписка из протокола) о назначении  &nbsp;директора (Ген. директора),&nbsp;</span><br>
+                    <span>- Паспорта учредителей, Ген. Директора (Все страницы)&nbsp;</span><br>
+                    <span>- Карточка компании&nbsp;</span><br>
+                    <span></span><br>
+                    <span>Фин. Документы&nbsp;(цветные скан-копии):&nbsp;</span><br>
+                    <span></span><br>
+                    <span>- Баланс&nbsp;за 1 - кв. 2021 года&nbsp;&nbsp;Ф.1,2 заверенный (подпись, печать компании), с квитанцией о приеме в ИФНС&nbsp;&nbsp;&nbsp;</span><br>
+                    <span>- Годовой баланс за 2020 год Ф.1,2 заверенный (подпись, печать компании), с квитанцией о приеме в ИФНС</span><br>
+                    <span> </span><br>
+                    <span> &nbsp;УСН:</span><br>
+                    <span></span><br>
+                    <span>- Деклараця по УСН за 2020 год заверенная (подпись, печать компании), с квитанцией о приеме в ИФНС&nbsp; &nbsp; &nbsp;&nbsp;</span><br>
+                    <span> </span><br>
+                    <span></span>&nbsp; ОСН:&nbsp;<br>
+                    <span></span><br>
+                    <span>- Деклараця на прибыль за 1 - кв. 2021 года заверенная (подпись, печать компании с квитанцией о приеме в ФНС),&nbsp;&nbsp;&nbsp;</span><br>
+                    <span>- Деклараця на прибыль за 2020 год заверенная (подпись, печать компании с квитанцией о приеме в ФНС),</span><br>
+                    <span> </span><br>
+                    <span> </span><br>
+                    <span><b>Физические лица:&nbsp;</b></span><br>
+                    <span></span><br>
+                    <span> &nbsp;ИП:&nbsp;</span><br>
+                    <span>- Паспорт (Все страницы)&nbsp;</span><br>
+                    <span>- Карточка компании&nbsp;</span><br>
+                    <span></span><br>
+                    <span>- Декларация по УСН за 2020 год заверенная (подпись, печать компании), с квитанцией о приеме в ИФНС&nbsp;</span><br>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
