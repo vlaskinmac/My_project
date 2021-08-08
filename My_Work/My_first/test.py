@@ -11,6 +11,7 @@ from requests.exceptions import InvalidSchema
 from selenium import webdriver
 import csv
 
+
 from termcolor import cprint
 
 HOST = 'https://zakupki.gov.ru'
